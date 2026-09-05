@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 1Fi EMI Product Page
 
 A full-stack app that shows smartphones with 0%-interest and interest-bearing EMI
@@ -189,3 +190,6 @@ unknown slug or ID.
 - Every product has 2–3 variants (storage and/or color), each with its own
   price, MRP and 7 EMI tenure options (3/6/12/24/36/48/60 months), matching
   the reference layout in the assignment brief.
+=======
+# 1Fi
+>>>>>>> b0ac923ea2fc409bf33f09663cecc2b057ef7bab
