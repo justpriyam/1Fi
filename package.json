@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "description": "1Fi EMI App workspace root scripts",
+  "workspaces": [
+    "1fi-emi-app/frontend",
+    "1fi-emi-app/backend"
+  ],
   "scripts": {
     "start": "node -e \"const { spawn } = require('child_process'); spawn('npm', ['start'], { cwd: '1fi-emi-app/backend', stdio: 'inherit', shell: true }); spawn('npm', ['run', 'preview'], { cwd: '1fi-emi-app/frontend', stdio: 'inherit', shell: true });\"",
     "dev:backend": "npm --prefix 1fi-emi-app/backend run dev",
@@ -11,6 +15,6 @@
     "seed": "npm --prefix 1fi-emi-app/backend run seed",
     "test": "npm --prefix 1fi-emi-app/backend test",
     "lint": "npm --prefix 1fi-emi-app/frontend run lint",
-    "build": "npm --prefix 1fi-emi-app/frontend run build"
+    "build": "npm --prefix 1fi-emi-app/frontend install && npm --prefix 1fi-emi-app/frontend run build && node -e \"const fs = require('fs'); if (fs.existsSync('1fi-emi-app/frontend/dist')) fs.cpSync('1fi-emi-app/frontend/dist', 'dist', { recursive: true });\""
   }
 }
