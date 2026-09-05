@@ -1,8 +1,16 @@
-const productsRouter = require("../1fi-emi-app/backend/routes/products");
+const { findProduct, listProducts } = require("./catalog");
 
 module.exports = (req, res) => {
-  req.url = req.url.replace(/^\/api\/products/, "") || "/";
-  return productsRouter(req, res, (error) => {
-    if (error) res.status(500).json({ error: error.message });
-  });
+  const identifier = req.query.idOrSlug || req.url.replace(/^\/api\/products\/?/, "");
+
+  if (!identifier) {
+    return res.status(200).json(listProducts());
+  }
+
+  const product = findProduct(identifier.split("?")[0]);
+  if (!product) {
+    return res.status(404).json({ error: `No product found with identifier "${identifier}"` });
+  }
+
+  return res.status(200).json(product);
 };
