@@ -1,4 +1,4 @@
-const rawBase = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000";
+const rawBase = import.meta.env.VITE_API_BASE_URL || "";
 const API_BASE_URL = rawBase.trim().replace(/\/+$/, "");
 
 async function request(pathname) {

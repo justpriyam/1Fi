@@ -15,6 +15,6 @@
     "seed": "npm --prefix 1fi-emi-app/backend run seed",
     "test": "npm --prefix 1fi-emi-app/backend test",
     "lint": "npm --prefix 1fi-emi-app/frontend run lint",
-    "build": "npm --prefix 1fi-emi-app/frontend install && npm --prefix 1fi-emi-app/frontend run build && node -e \"const fs = require('fs'); if (fs.existsSync('1fi-emi-app/frontend/dist')) fs.cpSync('1fi-emi-app/frontend/dist', 'dist', { recursive: true });\""
+    "build": "npm --prefix 1fi-emi-app/frontend install && npm --prefix 1fi-emi-app/frontend run build && node -e \"const fs = require('fs'); if (fs.existsSync('1fi-emi-app/frontend/dist')) fs.cpSync('1fi-emi-app/frontend/dist', 'dist', { recursive: true }); fs.cpSync('1fi-emi-app/backend/public/images', 'dist/images', { recursive: true });\""
   }
 }
