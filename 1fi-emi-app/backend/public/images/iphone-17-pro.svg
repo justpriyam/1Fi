@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 480" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#C96A34" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C96A34" stop-opacity="0.95" />
+      <stop offset="60%" stop-color="#C96A34" />
+      <stop offset="100%" stop-color="#111827" stop-opacity="0.4" />
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EA580C" /><stop offset="40%" stop-color="#831843" /><stop offset="100%" stop-color="#1E1B4B" />
+    </linearGradient>
+    <linearGradient id="glassReflect" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25" />
+      <stop offset="35%" stop-color="#FFFFFF" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="softShadow" x="-15%" y="-15%" width="135%" height="135%">
+      <feDropShadow dx="3" dy="16" stdDeviation="14" flood-color="#0F172A" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Ambient glow backdrop -->
+  <rect width="500" height="480" rx="24" fill="#F8FAFC" />
+  <circle cx="250" cy="240" r="210" fill="url(#bgGlow)" />
+
+  <!-- Left Device: Back View -->
+  <g transform="translate(80, 60)" filter="url(#softShadow)">
+    <!-- Outer Frame / Titanium edge -->
+    <rect x="0" y="0" width="168" height="348" rx="36" fill="#E68A4F" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1.5" />
+    <!-- Rear glass body -->
+    <rect x="3" y="3" width="162" height="342" rx="34" fill="url(#bodyGrad)" />
+    <rect x="3" y="3" width="162" height="342" rx="34" fill="url(#glassReflect)" />
+
+    
+      <!-- iPhone Triple Pro Camera Plateau -->
+      <rect x="12" y="16" width="92" height="96" rx="26" fill="#C96A34" filter="url(#softShadow)" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1" />
+      <circle cx="38" cy="42" r="17" fill="#0F172A" stroke="#E68A4F" stroke-width="2.5" />
+      <circle cx="38" cy="42" r="10" fill="#1E293B" />
+      <circle cx="34" cy="38" r="4" fill="#38BDF8" opacity="0.7" />
+
+      <circle cx="38" cy="86" r="17" fill="#0F172A" stroke="#E68A4F" stroke-width="2.5" />
+      <circle cx="38" cy="86" r="10" fill="#1E293B" />
+      <circle cx="34" cy="82" r="4" fill="#38BDF8" opacity="0.7" />
+
+      <circle cx="76" cy="64" r="17" fill="#0F172A" stroke="#E68A4F" stroke-width="2.5" />
+      <circle cx="76" cy="64" r="10" fill="#1E293B" />
+      <circle cx="72" cy="60" r="4" fill="#38BDF8" opacity="0.7" />
+
+      <!-- LiDAR + True Tone Flash -->
+      <circle cx="76" cy="30" r="7" fill="#FEF08A" stroke="#CBD5E1" stroke-width="1" opacity="0.9" />
+      <circle cx="76" cy="98" r="5" fill="#090D16" />
+    
+
+    <!-- Brand Accent dot -->
+    <circle cx="84" cy="195" r="12" fill="#FFFFFF" fill-opacity="0.2" />
+  </g>
+
+  <!-- Right Device: Front Screen View -->
+  <g transform="translate(235, 75)" filter="url(#softShadow)">
+    <!-- Frame -->
+    <rect x="0" y="0" width="168" height="348" rx="36" fill="#E68A4F" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.5" />
+    <!-- Black bezel -->
+    <rect x="3" y="3" width="162" height="342" rx="34" fill="#090D16" />
+    <!-- Screen wallpaper -->
+    <rect x="7" y="7" width="154" height="334" rx="31" fill="url(#screenGrad)" />
+
+    
+      <!-- Dynamic Island pill -->
+      <rect x="54" y="14" width="60" height="14" rx="7" fill="#000000" />
+      <circle cx="102" cy="21" r="3" fill="#1E293B" />
+    
+
+    <!-- Sleek Lockscreen UI Overlay Elements -->
+    <text x="84" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="600" fill="#FFFFFF" fill-opacity="0.95" text-anchor="middle">09:41</text>
+    <text x="84" y="84" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#FFFFFF" fill-opacity="0.8" text-anchor="middle">Wednesday, Sept 9</text>
+
+    <!-- Bottom Home Bar -->
+    <rect x="54" y="328" width="60" height="4" rx="2" fill="#FFFFFF" fill-opacity="0.75" />
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+{
+  "name": "1fi-emi-app-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "1Fi EMI App root scripts for running backend and frontend simultaneously",
+  "scripts": {
+    "start": "node -e \"const { spawn } = require('child_process'); spawn('npm', ['start'], { cwd: 'backend', stdio: 'inherit', shell: true }); spawn('npm', ['run', 'preview'], { cwd: 'frontend', stdio: 'inherit', shell: true });\"",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev": "node -e \"const { spawn } = require('child_process'); spawn('npm', ['start'], { cwd: 'backend', stdio: 'inherit', shell: true }); spawn('npm', ['run', 'dev'], { cwd: 'frontend', stdio: 'inherit', shell: true });\"",
+    "seed": "npm --prefix backend run seed",
+    "test": "npm --prefix backend test",
+    "lint": "npm --prefix frontend run lint",
+    "build": "npm --prefix frontend run build"
+  }
+}
